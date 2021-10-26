@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <select
+      [(ngModel)]="selectedCountry"
+      name="countryDropDown"
+      (change)="onCountrySelect(selectedCountry)"
+      #dropdownCopuntrey
+    >
+      <option *ngFor="let country of countryDetails" [value]="country.id">
+        <p id="country.id" (chnage)="onCountrySelect(country)">
+          {{ country.country }}
+        </p>
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <select [(ngModel)]="state">
+      <option *ngFor="let state of selectedStates">
+        <p>{{ state }}</p>
+      </option>
+    </select>
+  </div>
+</div>
