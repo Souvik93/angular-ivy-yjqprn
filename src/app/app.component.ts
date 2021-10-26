@@ -32,6 +32,6 @@ export class AppComponent implements OnInit {
 
     console.log(this.selectedCountry);
 
-    this.selectedStates = this.selectedCountry.states;
+    this.selectedStates = this.countryDetails.filter(c=>c.id==country)[0].states;
   }
 }
